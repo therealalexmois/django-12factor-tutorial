@@ -14,9 +14,11 @@ Including another URLconf
     2. Добавить URL в urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+from debug_toolbar.toolbar import debug_toolbar_urls
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 
 urlpatterns = [
+    path('polls/', include('django_polls.urls')),
     path('admin/', admin.site.urls),
-]
+] + debug_toolbar_urls()

@@ -11,4 +11,5 @@ class PollsConfig(AppConfig):
     """
 
     default_auto_field: str = 'django.db.models.BigAutoField'
-    name: str = 'polls'
+    name: str = 'django_polls'
+    label: str = 'polls'
